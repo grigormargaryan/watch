@@ -20,27 +20,27 @@
                 <form action="/contact" method="post" class="leave-comment">
                     {{ csrf_field() }}
                     <h4 class="m-text26 p-b-36 p-t-15">
-                        Send us your message
+                        Հետադարձ կապ
                     </h4>
 
                     <div class="bo4 of-hidden size15 m-b-20">
-                        <input class="sizefull s-text7 p-l-22 p-r-22" type="text" required name="your-name" placeholder="Full Name">
+                        <input class="sizefull s-text7 p-l-22 p-r-22" type="text" required name="your-name" placeholder="Անուն">
                     </div>
 
                     <div class="bo4 of-hidden size15 m-b-20">
-                        <input class="sizefull s-text7 p-l-22 p-r-22" type="text" required name="your-phone" placeholder="Phone Number">
+                        <input class="sizefull s-text7 p-l-22 p-r-22" type="text" required name="your-phone" placeholder="Հեռախոսահամար">
                     </div>
 
                     <div class="bo4 of-hidden size15 m-b-20">
-                        <input class="sizefull s-text7 p-l-22 p-r-22" type="email" required name="email" placeholder="Email Address">
+                        <input class="sizefull s-text7 p-l-22 p-r-22" type="email" required name="email" placeholder="Էլ. փոստ">
                     </div>
 
-                    <textarea class="dis-block s-text7 size20 bo4 p-l-22 p-r-22 p-t-13 m-b-20" required name="your-message" placeholder="Message"></textarea>
+                    <textarea class="dis-block s-text7 size20 bo4 p-l-22 p-r-22 p-t-13 m-b-20" required name="your-message" placeholder="Հաղորդագրություն"></textarea>
 
                     <div class="w-size25">
                         <!-- Button -->
                         <button class="flex-c-m size2 bg1 bo-rad-23 hov1 m-text3 trans-0-4">
-                            Send
+                            ՈՒղարկել
                         </button>
                     </div>
                 </form>
