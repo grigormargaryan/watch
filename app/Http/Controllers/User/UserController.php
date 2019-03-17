@@ -128,11 +128,9 @@ class UserController extends Controller
             }
         }
 
-        $emails = ['margaryanmgrigor@gmail.com', 'grigor.margaryan89@mail.ru'];
-
-        Mail::send('email.order', ['request' => $request], function ($m) use($emails) {
+        Mail::send('email.order', ['request' => $request], function ($m) use($request) {
             $m->from('margaryanmgrigor@gmail.com','2ntOne');
-            $m->to($emails)->subject('New Order');
+            $m->to('margaryanmgrigor@gmail.com')->subject('New Order');
         });
 
         return response()->json(true);
