@@ -13,6 +13,7 @@
         <div class="container-table-cart pos-relative">
             <div class="wrap-table-shopping-cart bgwhite">
                 <div class="danger-msg"></div>
+                <div class="success-msg"></div>
                 <table class="table-shopping-cart" id="myTable">
                     <tr class="table-head">
                         <th class="column-1"></th>

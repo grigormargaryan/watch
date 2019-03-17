@@ -4248,6 +4248,14 @@ body.loading .modal1 {
     color: #e65440;
     display: none;
 }
+.success-msg {
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+    font-size: 22px;
+    color: green;
+    display: none;
+}
 
 
 

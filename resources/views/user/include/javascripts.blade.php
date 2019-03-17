@@ -191,6 +191,8 @@
                         dataType: 'JSON',
                         success: function (data) {
                             if(data === true){
+                                $('.success-msg').show();
+                                $('.success-msg').html('Շնորհակալություն պատվերի համար! Մեր աշխատակիցը 15 րոպեի ընթացքում կապ կհաստատի Ձեզ հետ');
                                 $('.req').each(function () {
                                     $(this).val('')
                                 });
