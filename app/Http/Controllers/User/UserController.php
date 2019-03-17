@@ -116,7 +116,6 @@ class UserController extends Controller
             $order->description = $request->data['info'][4];
         }
         $order->save();
-
         foreach ($request->data['product'] as $product){
             $prod = Products::where('id', $product);
             if($prod && ($prod->first()->quantity > 0)){
