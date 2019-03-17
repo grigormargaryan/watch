@@ -942,7 +942,8 @@ li.sale-noti > a {
 }
 
 .logo-mobile img {
-  max-height: 27px;
+  max-height: 90px;
+  width: 130px;
 }
 
 /*[ btn show menu ]

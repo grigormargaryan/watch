@@ -1,6 +1,6 @@
-<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url({{ asset('images/heading-pages-06.jpg')}})">
+<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background: #e65440">
     <h2 class="l-text2 t-center">
-        Contact
+        Կապ մեզ հետ
     </h2>
 </section>
 

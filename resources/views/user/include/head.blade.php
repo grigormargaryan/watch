@@ -1,15 +1,15 @@
 
     <meta charset="UTF-8">
-    <link rel="shortcut icon" href="{{ asset('images/2ntonelogo.png') }}"
+    <link rel="shortcut icon" href="{{ asset('images/logos.png') }}"
           type="image/x-icon">
-    <link rel="icon" href="{{ asset('images/2ntonelogo.png') }}"
+    <link rel="icon" href="{{ asset('images/logos.png') }}"
           type="image/x-icon">
     <!-- Responsive -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>GREEN LAD</title>
+    <title>2ntOne</title>
 
     <link rel="stylesheet" type="text/css" href="{{ asset('usercss/bootstrap.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('font_awesome/css/font-awesome.css') }}" >

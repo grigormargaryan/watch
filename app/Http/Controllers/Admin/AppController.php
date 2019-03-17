@@ -256,7 +256,7 @@ class AppController extends Controller
         $subCategorys = SubCategorys::all();
         $brands = Brand::all();
         $colors = Color::all();
-        $belts = Belt   ::all();
+        $belts = Belt::all();
         return view('add_product', compact('categorys', 'subCategorys', 'brands', 'colors', 'belts'));
     }
 

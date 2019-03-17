@@ -1,8 +1,8 @@
 <?php // dd(\Session::get('name')); ?>
 <!-- Title Page -->
-<section class="bg-title-page p-t-50 p-b-40 flex-col-c-m" style="background-image: url({{ asset('images/2ntonelogo.png')}})">
-    <h2 class="l-text2 t-center">
-        Women
+<section class="bg-title-page p-t-50 p-b-40 flex-col-c-m" style="background: #e65440">
+    <h2 class="l-text2 t-center section-text">
+        2ntOne
     </h2>
     <p class="m-text13 t-center">
         {{--New Arrivals Women Collection 2018--}}
@@ -23,12 +23,12 @@
 
                     <ul class="p-b-54 radio-toolbar">
                         <li class="p-t-4">
-                            <input class="category-radio" id="all" type="radio" value="all" name="color-filter1" checked>
+                            <input class="category-radio" id="all" val="all" type="radio" value="all" name="color-filter1" checked>
                             <label class="category-label" for="all">Բոլորը</label>
                         </li>
                         @foreach($categorys as $category)
                             <li class="p-t-4">
-                                <input class="category-radio" id="{{$category->id}}" type="radio" value="{{$category->id}}" name="color-filter1">
+                                <input class="category-radio" id="{{$category->id}}" val="{{$category->name}}" type="radio" value="{{$category->id}}" name="color-filter1">
                                 <label class="category-label" for="{{$category->id}}">{{$category->name}}</label>
                             </li>
                         @endforeach

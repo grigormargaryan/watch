@@ -22,14 +22,21 @@
 <script type="text/javascript" src="{{ asset('userjs/sweetalert.min.js') }}"></script>
 
 <script type="text/javascript" src="{{ asset('userjs/main.js') }}"></script>
-{{--<script type="text/javascript" src="{{ asset('userjs/nouislider.min.js') }}"></script>--}}
-
-{{--<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>--}}
 <script src="{{ asset('js/share.js') }}"></script>
 
 <script type="text/javascript">
 
     $(document).ready(function () {
+
+        $body = $("body");
+        $body.addClass("loading")
+        setTimeout(function(){
+            $body.removeClass("loading") }, 500);
+
+        var d = new Date();
+        var n = d.getFullYear();
+        document.getElementById("demo").innerHTML = '2ntOne ' + n
+
         var v = document.cookie.match('(^|;)?shop=([^;]*)(;|$)');
         var heart = document.cookie.match('(^|;)?heart=([^;]*)(;|$)');
 
@@ -114,11 +121,102 @@
 //        product add to heart with cookie end
 
         if (window.location.pathname === '/basket') {
-            $body = $("body");
 
-//              ajaxStart: function() { $body.addClass("loading");    },
-//                ajaxStop: function() { $body.removeClass("loading"); }
+            var productName = '';
 
+            //		order
+
+			var orderData = {
+			    product: [],
+				info: []
+			};
+
+            $('#order').click( function () {
+                if (v) {
+                    if (v[2]) {
+//                        console.log(v[2].split(','))
+                    }
+                }else{
+                    $('#myTable').hide();
+                    $('.danger-msg').show();
+                    $('.danger-msg').html('Ձեր զամբյուղը դատարկ է խնդրում եմ ընտրեք ապրանքեր');
+                    return false;
+				}
+				var reqErr = 'Պարտադիր լրացման դաշտ';
+                var globalErr = false;
+				$('.req').each(function () {
+				    if(!$(this).val()){
+                        $('.'+$(this).attr('name')+'-err').show();
+                        $('.'+$(this).attr('name')+'-err').html(reqErr);
+                        globalErr = true;
+					}else{
+                        $('.'+$(this).attr('name')+'-err').hide();
+                        orderData.info.push($(this).val());
+					}
+                });
+				if(globalErr) {
+				    return false;
+				}
+
+                if(phone_validate($('.phone').val()) && $('.phone').val().length >=9)
+                {
+                    $('.phone-err').hide();
+                }
+                else
+                {
+                    globalErr = true
+                    $('.phone-err').show();
+                    $('.phone-err').html('Սխալ հեռախոսահամար');
+                    event.preventDefault();
+                }
+
+                function phone_validate(phno)
+                {
+                    var regexPattern=new RegExp(/^[0-9-+]+$/);
+                    return regexPattern.test(phno);
+                }
+
+                if(!globalErr) {
+                    orderData.info.push(productName);
+                    if($('.description').val()){
+                        orderData.info.push($('.description').val());
+					}
+                    orderData.product = v[2].split(',')
+
+                    $body.addClass("loading")
+                    $.ajax({
+                        url: '/add-order',
+                        type: 'POST',
+                        data: {_token: CSRF_TOKEN, data: orderData},
+                        dataType: 'JSON',
+                        success: function (data) {
+                            if(data === true){
+                                $('.req').each(function () {
+                                    $(this).val('')
+                                });
+                                $('.description').val('')
+                                removeCookie()
+                                $body.removeClass("loading")
+
+							}else{
+                                $('.req').each(function () {
+                                    $(this).val('')
+                                });
+                                $('#myTable').hide();
+                                $('.danger-msg').show();
+                                $('.danger-msg').html(data);
+                                $('.description').val('')
+                                removeCookie()
+                                $body.removeClass("loading")
+							}
+                        }
+                    });
+
+                }
+
+
+
+            });
 
             var v = document.cookie.match('(^|;)?shop=([^;]*)(;|$)');
             var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
@@ -139,6 +237,7 @@
                     /* remind that 'data' is the response of the AjaxController */
                     success: function (data) {
                         $.each(data, function (index, value) {
+                            productName +=  value.name + ',';
                             var markup = "<tr class='table-row'>"
                                 + "<td class='column-1'>"
                                 + "<div class='cart-img-product b-rad-4 o-f-hidden basket-img' title='Ջնջել' attr='" + value.id + "'>"
@@ -150,16 +249,16 @@
                                 + "<snap> Դրամ</snap>"
                                 + "</td>"
                                 + "<td class='column-4'>"
-                                + "<div class='flex-w bo5 of-hidden w-size17'>"
-                                + "<button class='btn-num-product-down color1 flex-c-m size7 bg8 eff2 plus-minus' add='minus' attr='" + value.id + "'>"
-                                + "<i class='fs-12 fa fa-minus' aria-hidden='true'></i>"
-                                + "</button>"
+                                + "<div class='flex-w bo5 of-hidden styl-input'>"
+//                                + "<button class='btn-num-product-down color1 flex-c-m size7 bg8 eff2 plus-minus' add='minus' attr='" + value.id + "'>"
+//                                + "<i class='fs-12 fa fa-minus' aria-hidden='true'></i>"
+//                                + "</button>"
 
                                 + "<input readonly class='size8 m-text18 t-center num-product' id='" + value.id + "' type='number' name='num-product1' value='1'>"
 
-                                + "<button class='btn-num-product-up color1 flex-c-m size7 bg8 eff2 plus-minus' add='plus' attr='" + value.id + "'>"
-                                + "<i class='fs-12 fa fa-plus' aria-hidden='true'></i>"
-                                + "</button>"
+//                                + "<button class='btn-num-product-up color1 flex-c-m size7 bg8 eff2 plus-minus' add='plus' attr='" + value.id + "'>"
+//                                + "<i class='fs-12 fa fa-plus' aria-hidden='true'></i>"
+//                                + "</button>"
                                 + "</div>"
                                 + "</td>"
                                 + "<td class='column-5 total " + value.id + "'>" + value.price + ""
@@ -243,6 +342,10 @@
         }
 
         $('.remove-cook').click(function () {
+            removeCookie()
+        });
+
+        function removeCookie() {
             var res = document.cookie;
             var multiple = res.split(";");
             var flag = false;
@@ -261,8 +364,7 @@
                 $("#myTable").remove();
             }
             $(".header-icons-noti").html(0)
-
-        });
+        }
 
         //filter start
 
@@ -287,6 +389,11 @@
         });
 
         $('.category-radio').change(function (e) {
+            if(e.target.id !== 'all') {
+                $('.section-text').text($('#'+e.target.id).attr('val'))
+            }else{
+                $('.section-text').text('2ntone')
+            }
             data.category = e.target.value;
             fetch_data(1, data)
         });

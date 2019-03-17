@@ -23,7 +23,7 @@ class CreateProductsTable extends Migration
             $table->integer('belt_id')->nullable();
             $table->string('name')->nullable();
             $table->text('description')->nullable();
-            $table->text('quantity')->nullable();
+            $table->integer('quantity')->nullable();
             $table->integer('price');
             $table->timestamps();
         });

@@ -5,6 +5,7 @@
 </head>
 <body class="home page-template page-template-tpl-king_composer page-template-tpl-king_composer-php page page-id-10 kingcomposer kc-css-system">
 
+<div class="modal1"> </div>
 
 <div class="boxed_wrapper">
 

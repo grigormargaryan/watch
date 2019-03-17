@@ -4234,3 +4234,22 @@ body.loading .modal1 {
     display: block !important;
 }
 
+.styl-input {
+    width: 55px;
+    margin-left: 70px;
+}
+
+.danger-msg {
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+    font-size: 22px;
+    color: #e65440;
+    display: none;
+}
+
+.err-msg-req {
+    font-size: 15px;
+    color: #e65440;
+    display: none;
+}

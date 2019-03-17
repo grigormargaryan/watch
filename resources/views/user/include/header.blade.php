@@ -4,11 +4,11 @@
         <div class="wrap_header3 p-t-74">
             <!-- Logo -->
             <a href="/" class="logo3">
-                <img src="{{ asset('images/logo.png') }}" alt="IMG-LOGO">
+                <img src="{{ asset('images/logos.png') }}" alt="IMG-LOGO">
             </a>
 
             <!-- Header Icon -->
-            <div class="header-icons3 p-t-38 p-b-60 p-l-8">
+            <div class="header-icons3 p-b-60 p-l-8">
                 <div class="header-wrapicon2">
                         <i class="icon-wishlist icon_heart heart-ajax dis-none-menu header-icon1 js-show-header-dropdown" aria-hidden="true"></i>
                         <span class="header-icons-noti-heart">0</span>
@@ -60,9 +60,9 @@
                         <li>
                             <a href="/basket">ԶԱՄԲՅՈՒՂ</a>
                         </li>
-                        <li>
-                            <a href="/about">ՄԵՐ ՄԱՍԻՆ</a>
-                        </li>
+                        {{--<li>--}}
+                            {{--<a href="/about">ՄԵՐ ՄԱՍԻՆ</a>--}}
+                        {{--</li>--}}
 
                         <li>
                             <a href="/contact">ԿԱՊ ՄԵԶ ՀԵՏ</a>
@@ -74,11 +74,11 @@
 
         <div class="bottombar flex-col-c p-b-65">
             <div class="bottombar-social t-center p-b-8">
-                <a href="#" class="topbar-social-item fa fa-facebook"></a>
-                <a href="#" class="topbar-social-item fa fa-instagram"></a>
-                <a href="#" class="topbar-social-item fa fa-pinterest-p"></a>
-                <a href="#" class="topbar-social-item fa fa-snapchat-ghost"></a>
-                <a href="#" class="topbar-social-item fa fa-youtube-play"></a>
+                <a href="https://www.facebook.com/2nt%D6%85ne-2227395593985725/?modal=admin_todo_tour" target="_blank" class="topbar-social-item fa fa-facebook"></a>
+                <a href="#" class="topbar-social-item fa fa-instagram" target="_blank"></a>
+                {{--<a href="#" class="topbar-social-item fa fa-pinterest-p"></a>--}}
+                {{--<a href="#" class="topbar-social-item fa fa-snapchat-ghost"></a>--}}
+                {{--<a href="#" class="topbar-social-item fa fa-youtube-play"></a>--}}
             </div>
         </div>
     </div>
@@ -87,7 +87,7 @@
     <div class="wrap_header_mobile">
         <!-- Logo moblie -->
         <a href="/" class="logo-mobile">
-            <img src="{{ asset('images/logo.png')}}" alt="IMG-LOGO">
+            <img src="{{ asset('images/logos.png')}}" alt="IMG-LOGO">
         </a>
 
         <!-- Button show menu -->
@@ -198,11 +198,11 @@
 
                 <li class="item-topbar-mobile p-l-10">
                     <div class="topbar-social-mobile">
-                        <a href="#" class="topbar-social-item fa fa-facebook"></a>
-                        <a href="#" class="topbar-social-item fa fa-instagram"></a>
-                        <a href="#" class="topbar-social-item fa fa-pinterest-p"></a>
-                        <a href="#" class="topbar-social-item fa fa-snapchat-ghost"></a>
-                        <a href="#" class="topbar-social-item fa fa-youtube-play"></a>
+                        <a href="https://www.facebook.com/2nt%D6%85ne-2227395593985725/?modal=admin_todo_tour" target="_blank" class="topbar-social-item fa fa-facebook"></a>
+                        <a href="#" class="topbar-social-item fa fa-instagram" target="_blank"></a>
+                        {{--<a href="#" class="topbar-social-item fa fa-pinterest-p"></a>--}}
+                        {{--<a href="#" class="topbar-social-item fa fa-snapchat-ghost"></a>--}}
+                        {{--<a href="#" class="topbar-social-item fa fa-youtube-play"></a>--}}
                     </div>
                 </li>
 
@@ -219,9 +219,9 @@
                 <li class="item-menu-mobile">
                     <a href="/basket">ԶԱՄԲՅՈՒՂ</a>
                 </li>
-                <li class="item-menu-mobile">
-                    <a href="/about">ՄԵՐ ՄԱՍԻՆ</a>
-                </li>
+                {{--<li class="item-menu-mobile">--}}
+                    {{--<a href="/about">ՄԵՐ ՄԱՍԻՆ</a>--}}
+                {{--</li>--}}
 
                 <li class="item-menu-mobile">
                     <a href="/contact">ԿԱՊ ՄԵԶ ՀԵՏ</a>

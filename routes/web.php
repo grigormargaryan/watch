@@ -33,6 +33,7 @@ Route::post('/contact', 'User\UserController@sendContactMessage');
 Route::get('/basket', 'User\UserController@getBasket');
 Route::post('/add-basket', 'User\UserController@addBasket');
 Route::post('/add-heart', 'User\UserController@addHeart');
+Route::post('/add-order', 'User\UserController@addOrder');
 Route::get('/about', 'User\UserController@aboutUs');
 Route::get('/product/{id}', 'User\UserController@product');
 

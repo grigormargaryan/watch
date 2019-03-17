@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Session;
 use App\SubCategorys;
 use App\ProductsImages;
 use App\Products;
+use App\Order;
 use App\Category;
 use \Mapper;
 use Illuminate\Cookie\CookieJar;
@@ -23,7 +24,7 @@ class UserController extends Controller
     public function Welcome(){
         $categorys = Category::all();
         $colors = Color::all();
-        $products = Products::with('projectsImg')->paginate(2);
+        $products = Products::with('projectsImg')->where('quantity', '>', 0)->paginate(2);
         return view('welcome', compact('categorys', 'products', 'colors'));
     }
 
@@ -103,6 +104,39 @@ class UserController extends Controller
     public function addHeart (Request $request,CookieJar $cookieJar) {
         $product = Products::with('projectsImg')->whereIn('id', $request->id)->get();
         return response()->json($product);
+    }
+
+    public function addOrder (Request $request) {
+        $order = new Order();
+        $order->name = $request->data['info'][0];
+        $order->phone = $request->data['info'][1];
+        $order->address = $request->data['info'][2];
+        $order->products = $request->data['info'][3];
+        if($request->data['info'][4]){
+            $order->description = $request->data['info'][4];
+        }
+        $order->save();
+
+        foreach ($request->data['product'] as $product){
+            $prod = Products::where('id', $product);
+            if($prod && ($prod->first()->quantity > 0)){
+                $prod->update([
+                   'quantity' => $prod->first()->quantity - 1
+                ]);
+            }else{
+                return response()->json($err = 'Պատվերի ընթացքում առաջացել է սխալ! Խնդրում եմ կապ հաստատել մեզ հետ');
+            }
+        }
+
+        $emails = ['margaryanmgrigor@gmail.com', 'grigor.margaryan89@mail.ru'];
+
+        Mail::send('email.order', ['request' => $request], function ($m) use($emails) {
+            $m->from('margaryanmgrigor@gmail.com','2ntOne');
+            $m->to($emails)->subject('New Order');
+        });
+
+        return response()->json(true);
+
     }
 
 }
