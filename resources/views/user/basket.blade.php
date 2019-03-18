@@ -8,7 +8,7 @@
 
 <!-- Cart -->
 <section class="cart bgwhite p-t-70 p-b-100">
-    <div class="container">
+    <div class="container wlecome-container float-lg-right">
         <!-- Cart item -->
         <div class="container-table-cart pos-relative">
             <div class="wrap-table-shopping-cart bgwhite">
