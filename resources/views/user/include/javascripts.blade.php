@@ -326,12 +326,19 @@
         }
         if (v) {
             if (v[2]) {
+                if(v[2][0] === ',') {
+                    v[2] = v[2].substr(1);
+				}
+
                 $('.header-icons-noti').html(v[2].split(',').length)
             }
         }
 
         if (heart) {
             if(heart[2]){
+                if(heart[2][0] === ',') {
+       			 	heart[2] = heart[2].substr(1);
+                }
                 $('.header-icons-noti-heart').html(heart[2].split(',').length)
             }
         }
