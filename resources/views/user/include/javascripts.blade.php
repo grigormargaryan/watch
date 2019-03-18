@@ -35,7 +35,7 @@
 
         var d = new Date();
         var n = d.getFullYear();
-        document.getElementById("demo").innerHTML = '2ntOne ' + n
+//        document.getElementById("demo").innerHTML = '2ntOne ' + n;
 
         var v = document.cookie.match('(^|;)?shop=([^;]*)(;|$)');
         var heart = document.cookie.match('(^|;)?heart=([^;]*)(;|$)');
@@ -523,11 +523,11 @@
                             +'</div>'
 
                             +'<div class="header-cart-item-txt">'
-                            +'<a href="#" class="header-cart-item-name">'
-                            +'White Shirt With Pleat Detail Back'
+                            +'<a href="/product/' + value.id + '" class="header-cart-item-name">'
+                            +value.name
                             +'</a>'
 
-                            +'<span class="header-cart-item-info">1 x $19.00 </span>'
+                            +'<span class="header-cart-item-info">1 x '+ value.price+'  Դրամ</span>'
                             +'</div>'
                             +'</li>'
                         $('#heart-ul').append(markup);
