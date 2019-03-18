@@ -5,7 +5,7 @@
 </section>
 
 <section class="bgwhite p-t-66 p-b-60">
-    <div class="container">
+    <div class="container wlecome-container float-lg-right">
         <div class="row">
             <div class="col-md-6 p-b-30">
                 <div class="p-r-20 p-r-0-lg">
