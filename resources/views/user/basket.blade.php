@@ -49,7 +49,7 @@
             {{--</div>--}}
             {{--</div>--}}
             <div class="flex-w flex-sb bo10 p-t-15 p-b-20">
-                <span class="s-text18 w-size19 w-full-sm font-weight-bold">
+                <span class="s-text w-size19 w-full-sm font-weight-bold">
                     Անուն:
                 </span>
 
@@ -60,7 +60,7 @@
                 </div>
             </div>
             <div class="flex-w flex-sb bo10 p-t-15 p-b-20">
-                <span class="s-text18 w-size19 w-full-sm font-weight-bold">
+                <span class="s-text w-size19 w-full-sm font-weight-bold">
                     Հեռախոս:
                 </span>
 
@@ -72,7 +72,7 @@
                 </div>
             </div>
             <div class="flex-w flex-sb bo10 p-t-10 p-b-20">
-                <span class="s-text18 w-size19 w-full-sm font-weight-bold">
+                <span class="s-text w-size19 w-full-sm font-weight-bold">
                     Հասցե:
                 </span>
 
@@ -84,7 +84,7 @@
                 </div>
             </div>
             <div class="flex-w flex-sb bo10 p-t-10 p-b-20">
-                <span class="s-text18 w-size19 w-full-sm font-weight-bold">
+                <span class="s-text w-size19 w-full-sm font-weight-bold">
                     Այլ նշումներ:
                 </span>
 

@@ -3029,6 +3029,14 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
 /*[ S-Text 0 - 15 ]
 ///////////////////////////////////////////////////////////
 */
+
+.s-text {
+    font-family: Montserrat-Bold;
+    font-size: 15px;
+    color: #555555;
+    line-height: 2.5;
+}
+
 .s-text1 {
 	font-family: Montserrat-Regular;
 	font-size: 15px;
@@ -3595,6 +3603,10 @@ SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE
 .size24 {
 	max-width: 1070px;
 	height: 100%;
+}
+
+.size25 {
+    width: 95% !important;
 }
 
 /*[ Width Size ]
