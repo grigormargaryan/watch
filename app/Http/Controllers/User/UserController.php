@@ -24,7 +24,7 @@ class UserController extends Controller
     public function Welcome(){
         $categorys = Category::all();
         $colors = Color::all();
-        $products = Products::with('projectsImg')->where('quantity', '>', 0)->paginate(4);
+        $products = Products::with('projectsImg')->where('quantity', '>', 0)->paginate(2);
         return view('welcome', compact('categorys', 'products', 'colors'));
     }
 
@@ -56,7 +56,7 @@ class UserController extends Controller
                     }
                 }
             }
-            $products = $products->paginate(4);
+            $products = $products->paginate(2);
             return view('user.welcomepagination', compact('products'))->render();
         }
     }

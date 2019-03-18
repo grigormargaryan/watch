@@ -89,10 +89,10 @@
 
 //        product add to heart with cookie
 
-        $(".dis-none").click(function (e) {
+        $(".heart-add-cook").click(function (e) {
+            var heart = document.cookie.match('(^|;)?heart=([^;]*)(;|$)');
             var d = new Date;
             d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * 2);
-            var heart = document.cookie.match('(^|;)?heart=([^;]*)(;|$)');
             if (heart) {
                 if (heart[2].search($(this).attr('attr')) !== -1) {
                     var nameProduct = $('.block2-name-' + $(this).attr('attr')).html();
@@ -121,16 +121,12 @@
 //        product add to heart with cookie end
 
         if (window.location.pathname === '/basket') {
-
             var productName = '';
-
             //		order
-
 			var orderData = {
 			    product: [],
 				info: []
 			};
-
             $('#order').click( function () {
                 if (v) {
                     if (v[2]) {
@@ -215,8 +211,6 @@
                     });
 
                 }
-
-
 
             });
 
@@ -495,17 +489,11 @@
 //    srtiki het kapvac start
 
     $('.heart-ajax').click(function () {
-
-        var heart = document.cookie.match('(^|;)?heart=([^;]*)(;|$)');
+		var atribut = $(this).attr('attr');
         var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
-        if (heart) {
-            $('#open-page').show();
-            var data = []
-            if (heart[2].length > 0) {
+        var heart = document.cookie.match('(^|;)?heart=([^;]*)(;|$)');
+        if (heart && heart[2].length > 0) {
                 data = heart[2].split(',')
-            } else {
-                data.push(heart[2])
-            }
             $.ajax({
                 /* the route pointing to the post function */
                 url: '/add-heart',
@@ -529,11 +517,21 @@
 
                             +'<span class="header-cart-item-info">1 x '+ value.price+'  Դրամ</span>'
                             +'</div>'
-                            +'</li>'
-                        $('#heart-ul').append(markup);
+                            +'</li>';
+                        if(atribut === 'mobile'){
+                            $('#heart-ul-mobile').append(markup);
+                        }else{
+                            $('#heart-ul').append(markup);
+                        }
+
                     });
                 }
             });
+            if(atribut === 'mobile'){
+                $('#open-page-mobile').show();
+			}else{
+                $('#open-page').show();
+			}
         }else{
             $('#open-page').hide();
         }
@@ -555,13 +553,18 @@
                             document.cookie = key[0] + "=; expires = Thu, 01 Jan 1970 00:00:00 UTC";
                         }
                     }
-                    $('#open-page').hide();
                     $(".header-icons-noti-heart").html(0)
+                    if(atribut === 'mobile'){
+                        $('#open-page-mobile').hide();
+                    }else{
+                        $('#open-page').hide();
+                    }
                 } else {
                     var index = array.indexOf($(this).attr('attr'));
                     if (index > -1) {
                         array.splice(index, 1);
                     }
+                    console.log(array)
                     document.cookie = 'heart' + "=" + array;
                     window.location.reload()
 
@@ -588,7 +591,8 @@
                 document.cookie = key[0] + "=; expires = Thu, 01 Jan 1970 00:00:00 UTC; path=/";
             }
         }
-        $('#open-page').hide();
+		$('#open-page-mobile').hide();
+		$('#open-page').hide();
         $(".header-icons-noti-heart").html(0)
         window.location.reload()
     });

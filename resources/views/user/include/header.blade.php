@@ -10,7 +10,7 @@
             <!-- Header Icon -->
             <div class="header-icons3 p-b-60 p-l-8">
                 <div class="header-wrapicon2">
-                        <i class="icon-wishlist icon_heart heart-ajax dis-none-menu header-icon1 js-show-header-dropdown" aria-hidden="true"></i>
+                        <i class="icon-wishlist icon_heart heart-ajax dis-none-menu header-icon1 js-show-header-dropdown" attr="web" aria-hidden="true"></i>
                         <span class="header-icons-noti-heart">0</span>
                     <!-- Header cart noti -->
                     <div class="header-cart header-dropdown" id="open-page">
@@ -94,11 +94,29 @@
         <div class="btn-show-menu">
             <!-- Header Icon mobile -->
             <div class="header-icons-mobile">
-                <a href="#" class="header-wrapicon1 dis-block">
-                    <i class="icon-wishlist icon_heart dis-none-menu" aria-hidden="true"></i>
-                    <span class="header-icons-noti-heart">0</span>
-                    {{--<img src="{{ asset('images/icon-header-01.png')}}" class="header-icon1" alt="ICON">--}}
-                </a>
+                <div class="header-wrapicon2">
+                        <i class="icon-wishlist icon_heart dis-none-menu heart-ajax" attr="mobile" aria-hidden="true"></i>
+                        <span class="header-icons-noti-heart">0</span>
+                    <!-- Header cart noti -->
+                    <div class="header-cart header-dropdown show-header-dropdown dis-none" id="open-page-mobile">
+                        <ul class="header-cart-wrapitem" id="heart-ul-mobile">
+
+                        </ul>
+
+                        <div class="header-cart-total">
+                        </div>
+
+                        <div class="header-cart-buttons">
+
+                            <div class="header-cart-wrapbtn w-100">
+                                <!-- Button -->
+                                <button class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4 fs-12 heart-remove">
+                                    Դատարկել
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <span class="linedivide2"></span>
 
@@ -108,78 +126,6 @@
                              alt="ICON">
                         <span class="header-icons-noti">0</span>
                     </a>
-
-                    <!-- Header cart noti -->
-                    <div class="header-cart header-dropdown">
-                        <ul class="header-cart-wrapitem">
-                            <li class="header-cart-item">
-                                <div class="header-cart-item-img">
-                                    <img src="images/item-cart-01.jpg" alt="IMG">
-                                </div>
-
-                                <div class="header-cart-item-txt">
-                                    <a href="#" class="header-cart-item-name">
-                                        White Shirt With Pleat Detail Back
-                                    </a>
-
-                                    <span class="header-cart-item-info">
-											1 x $19.00
-										</span>
-                                </div>
-                            </li>
-
-                            <li class="header-cart-item">
-                                <div class="header-cart-item-img">
-                                    <img src="{{ asset('images/item-cart-02.jpg')}}" alt="IMG">
-                                </div>
-
-                                <div class="header-cart-item-txt">
-                                    <a href="#" class="header-cart-item-name">
-                                        Converse All Star Hi Black Canvas
-                                    </a>
-
-                                    <span class="header-cart-item-info">
-											1 x $39.00
-										</span>
-                                </div>
-                            </li>
-
-                            <li class="header-cart-item">
-                                <div class="header-cart-item-img">
-                                    <img src="{{ asset('images/item-cart-03.jpg')}}" alt="IMG">
-                                </div>
-
-                                <div class="header-cart-item-txt">
-                                    <a href="#" class="header-cart-item-name">
-                                        Nixon Porter Leather Watch In Tan
-                                    </a>
-
-                                    <span class="header-cart-item-info">
-											1 x $17.00
-										</span>
-                                </div>
-                            </li>
-                        </ul>
-
-                        <div class="header-cart-total">
-                        </div>
-
-                        <div class="header-cart-buttons">
-                            <div class="header-cart-wrapbtn">
-                                <!-- Button -->
-                                <a href="/basket" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-                                    Դիտել զամբյուղը
-                                </a>
-                            </div>
-
-                            <div class="header-cart-wrapbtn">
-                                <!-- Button -->
-                                <a href="#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-                                    Դատարկել
-                                </a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
 
