@@ -220,7 +220,6 @@
 
             });
 
-            var v = document.cookie.match('(^|;)?shop=([^;]*)(;|$)');
             var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
             if (v) {
                 var data = []
