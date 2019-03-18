@@ -30,7 +30,7 @@ class UserController extends Controller
 
     public function WelcomeAjax(Request $request){
         if($request->ajax()){
-            $products = Products::with('projectsImg');
+            $products = Products::with('projectsImg')->where('quantity', '>' , 0);
             if(count($request->data) > 0){
                 if($request->data['name']){
                     $name = $request->data['name'];
