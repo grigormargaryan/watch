@@ -310,6 +310,12 @@ class AppController extends Controller
     public function deleteProduct($id)
     {
         $product = Products::find($id);
+        $images = ProductsImages::where('products_id',$id)->get()->pluck('filename');
+        foreach ($images as $img){
+            $filename = public_path().'/storage/upload/'.$img;
+            \File::delete($filename);
+        }
+
         if ($product->delete()) {
             return redirect()->route('allproducts')->with('status', 'Category successfully deleted');
         }

@@ -8,14 +8,6 @@
     <div class="container wlecome-container float-lg-right">
         <div class="row">
             <div class="col-md-6 p-b-30">
-                <div class="p-r-20 p-r-0-lg">
-                    <div style="width: 500px; height: 500px;">
-                        {!! Mapper::render() !!}
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 p-b-30">
 
                 <form action="/contact" method="post" class="leave-comment">
                     {{ csrf_field() }}
@@ -44,6 +36,35 @@
                         </button>
                     </div>
                 </form>
+            </div>
+            <div class="col-md-6 p-b-30 p-t-15">
+                <div class="section-title">
+                    <h4>Կապ</h4>
+                </div>
+                <div class="footer-contact-info">
+                    <ul class="clearfix">
+                        <li>
+                            <div class="iocn-holder"><span class="icon-home"></span></div>
+                            <div class="text-holder">
+                                <h6>Հասցե</h6>
+                                <p style="font-size: 15px; width: 120%">գ․ Պռոշյան</p></div>
+                        </li>
+                        <li>
+                            <div class="iocn-holder"><span class="icon-technology-1"></span></div>
+                            <div class="text-holder">
+                                <h6>Հեռախոս</h6>
+                                <p style="width: 120%">(+374) 95202034</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="iocn-holder"><span class="icon-letter-1"></span></div>
+                            <div class="text-holder">
+                                <h6>Էլ․ Հասցե</h6>
+                                <p>2ntone2019@gmail.com</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

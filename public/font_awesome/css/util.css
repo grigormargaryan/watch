@@ -4276,3 +4276,55 @@ body.loading .modal1 {
     color: #e65440;
     display: none;
 }
+
+.footer-contact-info {
+    overflow: hidden;
+    padding: 25px 30px 0;
+}
+
+.section-title {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.footer-contact-info ul li .iocn-holder, .footer-contact-info ul li .text-holder {
+    display: table-cell;
+    vertical-align: middle;
+    color: #61888e;
+}
+
+.footer-contact-info ul li .iocn-holder {
+    width: 48px;
+    border: 1px dashed #e65440;
+    border-radius: 50%;
+}
+
+.footer-contact-info ul li {
+    display: inline-block;
+    float: left;
+    margin-right: 30px;
+    padding-right: 30px;
+    position: relative;
+    padding-top: 4px;
+    padding-bottom: 30px;
+}
+
+.footer-contact-info ul li .iocn-holder span {
+    color: #e65440;
+    display: block;
+    font-size: 24px;
+    font-weight: 500;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    transition: all 500ms ease 0s;
+    width: 48px;
+}
+
+.footer-contact-info ul li .text-holder {
+    padding-left: 10px;
+}
+
+.clearfix {
+    display: grid;
+}

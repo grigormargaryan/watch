@@ -31,6 +31,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('font_awesome/css/lightbox.min.css') }}" >
     <link rel="stylesheet" type="text/css" href="{{ asset('font_awesome/css/util.css') }}" >
     <link rel="stylesheet" type="text/css" href="{{ asset('font_awesome/css/main.css') }}" >
+    <link rel="stylesheet" type="text/css" href="{{ asset('font_awesome/css/icomoon.css') }}" >
 
 
 
