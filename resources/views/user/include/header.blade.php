@@ -10,7 +10,7 @@
             <!-- Header Icon -->
             <div class="header-icons3 p-b-60 p-l-8">
                 <div class="header-wrapicon2">
-                        <i class="icon-wishlist icon_heart heart-ajax dis-none-menu header-icon1 js-show-header-dropdown" attr="web" aria-hidden="true"></i>
+                        <i class="icon_heart heart-ajax dis-none-menu header-icon1 js-show-header-dropdown fa fa-heart-o" attr="web" aria-hidden="true"></i>
                         <span class="header-icons-noti-heart">0</span>
                     <!-- Header cart noti -->
                     <div class="header-cart header-dropdown" id="open-page">
@@ -95,7 +95,7 @@
             <!-- Header Icon mobile -->
             <div class="header-icons-mobile">
                 <div class="header-wrapicon2">
-                        <i class="icon-wishlist icon_heart dis-none-menu heart-ajax" attr="mobile" aria-hidden="true"></i>
+                        <i class="icon_heart dis-none-menu heart-ajax fa fa-heart-o" attr="mobile" aria-hidden="true"></i>
                         <span class="header-icons-noti-heart">0</span>
                     <!-- Header cart noti -->
                     <div class="header-cart header-dropdown show-header-dropdown dis-none" id="open-page-mobile">
