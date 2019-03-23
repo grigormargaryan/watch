@@ -57,10 +57,10 @@
                         </div>
 
                         <ul class="flex-w">
-                            @foreach($products as $product)
+                            @foreach($colors as $color)
                                 <li class="m-r-10">
-                                    <input class="checkbox-color-filter" id="{{$product->color->title}}" type="checkbox" value="{{$product->color->id}}" name="">
-                                    <label title="{{$product->color->name}}" class="{{'b-shadow color-filter color-filter-'.$product->color->title}}" for="{{$product->color->title}}"></label>
+                                    <input class="checkbox-color-filter" id="{{$color->title}}" type="checkbox" value="{{$color->id}}" name="">
+                                    <label title="{{$color->name}}" class="{{'b-shadow color-filter color-filter-'.$color->title}}" for="{{$color->title}}"></label>
                                 </li>
                             @endforeach
 

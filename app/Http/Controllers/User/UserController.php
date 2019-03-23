@@ -24,7 +24,7 @@ class UserController extends Controller
     public function Welcome(){
         $categorys = Category::all();
         $colors = Color::all();
-        $products = Products::with('projectsImg')->with('color')->where('quantity', '>', 0)->paginate(6);
+        $products = Products::with('projectsImg')->where('quantity', '>', 0)->paginate(6);
         return view('welcome', compact('categorys', 'products', 'colors'));
     }
 
