@@ -65,7 +65,7 @@
 
                     <div class="rs2-select2 rs3-select2 of-hidden w-size16">
                         <div id="social-links">
-                                <a href="https://www.facebook.com/sharer/sharer.php?u={{env('APP_URL')}}/product/1" title="Կիսվել Ֆեյսբուքում" target="_blank" class="btn btn-facebook"><i class="fa
+                                <a href="https://www.facebook.com/sharer/sharer.php?u={{env('APP')}}/product/1" title="Կիսվել Ֆեյսբուքում" target="_blank" class="btn btn-facebook"><i class="fa
                                            fa-facebook"></i>Share
                                 </a>
                         </div>
