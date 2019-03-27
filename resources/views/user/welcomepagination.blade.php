@@ -4,7 +4,7 @@
             <!-- Block2 -->
             <div class="block2">
                 <div class="block2-img wrap-pic-w of-hidden pos-relative">
-                    <img src="{{ asset('/storage/upload/'. $product->projectsImg[0]->filename)}}" alt="IMG-PRODUCT">
+                    <img src="{{ asset('/storage/upload/'. $product->projectsImg[0]->filename)}}" alt="IMG-PRODUCT" class="product-img">
 
                     <div class="block2-overlay trans-0-4">
                         <a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">

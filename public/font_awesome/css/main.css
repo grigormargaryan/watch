@@ -1778,6 +1778,9 @@ li.sale-noti > a {
     .container-menu-header-v3{
         width: 290px !important;
     }
+    .product-img {
+        height: 215px;
+    }
 }
 
 @media only screen and (max-width: 1374px) and (min-width: 1260px){
@@ -1786,6 +1789,9 @@ li.sale-noti > a {
     }
     .container-menu-header-v3{
         width: 290px !important;
+    }
+    .product-img {
+        height: 200px;
     }
 }
 
@@ -2366,6 +2372,9 @@ input.num-product::-webkit-inner-spin-button {
     .slick-container {
         max-width: 1160px !important;
         margin-left: 25%
+    }
+    .product-img {
+        height: 305px;
     }
 
 }
