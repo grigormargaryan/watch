@@ -1808,6 +1808,12 @@ li.sale-noti > a {
   }
 }
 
+@media (min-width: 768px){
+    .product-img {
+        height: 275px ;
+    }
+}
+
 @media (max-width: 576px) {
   .rs1-block4 .block4 {
     width: calc(100% / 1);
