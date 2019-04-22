@@ -297,7 +297,7 @@ class AppController extends Controller
             $products = Products::find($id);
             $products->name = $request->name;
             $products->description = $request->description;
-            $products->categorys_id = $request->categorys_id;
+            $products->category_id = $request->categorys_id;
             $products->sub_categorys_id = $request->sub_categorys_id;
             $products->price = $request->price;
             $products->quantity = $request->quantity;
